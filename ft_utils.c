@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_client.c                                        :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: visaienk <visaienk@student.42prague.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 17:34:11 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/03 17:40:56 by visaienk         ###   ########.fr       */
+/*   Created: 2024/04/03 17:41:33 by visaienk          #+#    #+#             */
+/*   Updated: 2024/04/03 17:43:48 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int	main(int argc, char **argv)
+void	ft_write(char *s)
 {
-	if (argc != 3)
-		return (1);
-	else
-		ft_write(argv[argc - 1]);
+	while (*s != '\0')
+		write(1, s++, 1);
 }
