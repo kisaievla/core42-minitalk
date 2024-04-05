@@ -6,7 +6,7 @@
 /*   By: visaienk <visaienk@student.42prague.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:49:07 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/05 17:50:20 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/04/05 19:41:18 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 int	main(void)
 {
-	return (0);
+	int	pid;
+	char	*pids;
+	
+	pid = getpid();
+	pids = ft_itoa(pid);
+	ft_write(pids);
+	free(pids);
+	pause();
 }

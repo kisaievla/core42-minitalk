@@ -4,7 +4,7 @@ CC=cc
 CFLAGS= -Wall -Wextra -Werror
 HDR=minitalk.h
 SRCSC=ft_client.c ft_utils.c
-SRCSS=ft_server.c ft_utils.c
+SRCSS=ft_server.c ft_utils.c ft_itoa.c
 
 
 .PHONY: $(SERVER) $(CLIENT) clean fclean re 

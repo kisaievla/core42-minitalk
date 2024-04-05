@@ -6,7 +6,7 @@
 /*   By: visaienk <visaienk@student.42prague.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:11:49 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/05 17:51:59 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/04/05 19:34:06 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@
 
 // Utils
 void	ft_write(char *s);
+char	*ft_itoa(int nb);
 
 #endif
