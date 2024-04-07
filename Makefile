@@ -3,7 +3,7 @@ CLIENT=client
 CC=cc
 CFLAGS= -Wall -Wextra -Werror
 HDR=minitalk.h
-SRCSC=ft_client.c ft_utils.c
+SRCSC=ft_client.c ft_utils.c ft_atoi.c
 SRCSS=ft_server.c ft_utils.c ft_itoa.c
 
 
