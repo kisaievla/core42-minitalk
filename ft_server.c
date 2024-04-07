@@ -6,7 +6,7 @@
 /*   By: visaienk <visaienk@student.42prague.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:49:07 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/05 19:41:18 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/04/07 10:19:27 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ int	main(void)
 	ft_write(pids);
 	free(pids);
 	pause();
+	// On signal, open the file and read text from it
 }

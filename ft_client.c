@@ -6,7 +6,7 @@
 /*   By: visaienk <visaienk@student.42prague.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:34:11 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/05 19:56:30 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/04/07 10:17:37 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,5 @@ int	main(int argc, char **argv)
 	if (argc != 3)
 		ft_write("Some args are missing");
 	else
-	{
-		typedef struct sigaction s_sa;
-		s_sa.
-	}
+		ft_write("Write tet to a file and send a signal with kill");
 }
