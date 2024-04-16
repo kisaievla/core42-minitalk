@@ -6,37 +6,42 @@
 /*   By: visaienk <visaienk@student.42prague.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:34:11 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/07 16:13:38 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/04/16 14:47:21 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int	str_size(char *s)
+void	send_signal(int pid, unsigned char c)
 {
-	int	size;
+	int		i;
+	unsigned char	tmp_c;
 
-	size = 0;
-	while (*s)
+	i = 8;
+	while (i > 0)
 	{
-		size++;
-		s++;
+		i--;
+		tmp_c = c >> i;
+		if (tmp_c % 2 == 0)
+			kill(pid, SIGUSR2);
+		else
+			kill(pid, SIGUSR1);
+		usleep(42);
 	}
-	size++;
-	return (size);		
 }
 
 int	main(int argc, char **argv)
 {
-	int fd;
-
 	if (argc != 3)
 		ft_write("Some args are missing");
 	else
 	{
-		fd = open("buffer.txt", O_WRONLY);
-		write(fd, argv[argc - 1],  str_size(argv[argc - 1]));
-		close(fd);
-		kill(ft_atoi(argv[argc - 2]), SIGUSR1);
+		while (*(argv[argc - 1]))
+		{
+			send_signal(ft_atoi(argv[argc - 2]), *(argv[argc - 1]));
+			(argv[argc - 1])++;
+		}
+		send_signal(ft_atoi(argv[argc - 2]), '\0');
 	}
+	return (0);
 }

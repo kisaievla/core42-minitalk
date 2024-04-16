@@ -6,7 +6,7 @@
 /*   By: visaienk <visaienk@student.42prague.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:11:49 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/07 16:14:22 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/04/15 12:41:44 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <signal.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <stdio.h> //delete this before submission
 
 // Utils
 void	ft_write(char *s);
