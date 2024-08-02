@@ -6,7 +6,7 @@
 /*   By: visaienk <visaienk@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 12:52:57 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/05 19:39:08 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/08/02 17:38:06 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_itoa(int n)
 	char	*itoa;
 	size_t	n_digits;
 	size_t	i;
-	int	tmp;
+	int		tmp;
 
 	tmp = n;
 	n_digits = ft_n_digits(tmp);

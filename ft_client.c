@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_client.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: visaienk <visaienk@student.42prague.com>   +#+  +:+       +#+        */
+/*   By: visaienk <visaienk@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:34:11 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/16 14:47:21 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/08/02 17:40:08 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	send_signal(int pid, unsigned char c)
 {
-	int		i;
+	int				i;
 	unsigned char	tmp_c;
 
 	i = 8;
@@ -26,7 +26,7 @@ void	send_signal(int pid, unsigned char c)
 			kill(pid, SIGUSR2);
 		else
 			kill(pid, SIGUSR1);
-		usleep(42);
+		usleep(742);
 	}
 }
 

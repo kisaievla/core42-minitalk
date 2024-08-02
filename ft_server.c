@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_server.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: visaienk <visaienk@student.42prague.com>   +#+  +:+       +#+        */
+/*   By: visaienk <visaienk@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:49:07 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/16 14:52:17 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/08/02 17:38:38 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sigusr1_handler(int sig)
 {
 	static unsigned char	current_char;
-	static int		bit_index;
+	static int				bit_index;
 
 	current_char |= (sig == SIGUSR1);
 	bit_index++;
@@ -34,8 +34,8 @@ void	sigusr1_handler(int sig)
 
 int	main(void)
 {
-	int			pid;
-	char			*pids;
+	int					pid;
+	char				*pids;
 	struct sigaction	s_sa;
 
 	s_sa.sa_handler = &sigusr1_handler;

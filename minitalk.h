@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: visaienk <visaienk@student.42prague.com>   +#+  +:+       +#+        */
+/*   By: visaienk <visaienk@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:11:49 by visaienk          #+#    #+#             */
-/*   Updated: 2024/04/15 12:41:44 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/08/02 17:39:44 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@
 // Utils
 void	ft_write(char *s);
 char	*ft_itoa(int nb);
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 #endif
