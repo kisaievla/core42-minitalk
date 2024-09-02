@@ -6,7 +6,7 @@
 /*   By: visaienk <visaienk@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:49:07 by visaienk          #+#    #+#             */
-/*   Updated: 2024/08/02 17:38:38 by visaienk         ###   ########.fr       */
+/*   Updated: 2024/09/02 19:33:23 by visaienk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,16 @@ int	main(void)
 	struct sigaction	s_sa;
 
 	s_sa.sa_handler = &sigusr1_handler;
-	sigaction(SIGUSR1, &s_sa, NULL);
-	sigaction(SIGUSR2, &s_sa, NULL);
+	sigemptyset(&s_sa.sa_mask);
 	pid = getpid();
 	pids = ft_itoa(pid);
 	ft_write(pids);
 	free(pids);
 	while (42)
+	{
+		sigaction(SIGUSR1, &s_sa, NULL);
+		sigaction(SIGUSR2, &s_sa, NULL);
 		pause();
+	}
 	return (0);
 }
